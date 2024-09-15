@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Satoshi:wght@400;600&display=swap');
+
 /* General App layout */
 .App {
   text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #f0f4ff, #dce6f5); /* Softer gradient for better readability */
-  color: #333;
+  font-family: 'Satoshi', sans-serif;
+  background: linear-gradient(0deg, #E6E7EE, #E6E7EE); /* Softer gradient for better readability */
+  color: #223A60;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -13,22 +15,24 @@
 
 /* Adjust header styling */
 .App-header {
-  padding: 1rem;
+  padding: 10rem;
   margin-bottom: 2rem;
 }
 
 /* Improve title readability */
 h1 {
+  font-family: 'Satoshi', sans-serif;
   font-size: 3.5rem;
   font-weight: 700;
-  color: #1a202c;
+  color: #000000;
 }
 
 /* Text paragraph styling */
 p {
+  font-family: 'Satoshi', sans-serif;
   font-size: 1.25rem;
   line-height: 1.8;
-  color: #4a5568;
+  color: #223A60;
   margin: 1rem auto;
   max-width: 800px;
 }
@@ -39,7 +43,7 @@ p {
   max-width: 600px;
   margin: 0 auto;
   padding: 1.5rem;
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -48,7 +52,7 @@ p {
   padding: 0.75rem;
   font-size: 1.5rem;
   font-weight: 600;
-  background-color: #3182ce;
+  background-color: #6A6AE4;
   color: #fff;
   margin: 0.5rem 0;
   border-radius: 8px;
@@ -58,7 +62,7 @@ p {
 
 /* Hover effect for shuffling items */
 .ShufflingDisplay-item:hover {
-  background-color: #2b6cb0;
+  background-color: #51359e;
   transform: translateY(-5px); /* Lifting effect on hover */
 }
 
@@ -79,4 +83,59 @@ p {
   color: #61dafb;
   text-decoration: none;
   font-weight: 600;
+}
+
+#Logo {
+  scale: 0.75;
+}
+
+.button {
+  background-color: #6A6AE4;
+  /* Purple background */
+  color: white;
+  /* White text */
+  font-family: 'Satoshi', sans-serif;
+
+
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  /* No border */
+  border-radius: 50px;
+  /* Rounded corners */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* Smooth transition */
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.1);
+  /* Light ripple effect */
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease;
+}
+
+
+.button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+
+.button:hover {
+  background-color: white;
+  /* White background on hover */
+  color: black;
+  /* Black text on hover */
 }
