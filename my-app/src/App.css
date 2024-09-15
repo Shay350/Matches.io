@@ -11,11 +11,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-left: 20px; /* Move everything to the right */
 }
 
 /* Adjust header styling */
 .App-header {
-  padding: 10rem;
+  width: 100%;
+  padding: 10rem 0;
   margin-bottom: 2rem;
 }
 
@@ -39,6 +41,9 @@ p {
 
 /* Styling for the shuffling display component */
 .ShufflingDisplay-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 80%;
   max-width: 600px;
   margin: 0 auto;
@@ -48,13 +53,14 @@ p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Individual shuffling items */
 .ShufflingDisplay-item {
   padding: 0.75rem;
   font-size: 1.5rem;
   font-weight: 600;
   background-color: #6A6AE4;
   color: #fff;
-  margin: 0.5rem 0;
+  margin: 0.5rem;
   border-radius: 8px;
   transition: background-color 0.3s, transform 0.3s;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
@@ -67,75 +73,82 @@ p {
 }
 
 /* Navbar styling */
-.Navbar {
-  background-color: #1a202c;
-  color: #1a202c;
-  padding: 1rem;
+.navbar-container {
+  background-color: #001f3f; /* Navy Blue */
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000; /* Ensures the navbar stays on top */
+  padding-left: 20px; /* Shift navbar to the right */
 }
 
-.Navbar a {
-  color: #61dafb;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-#Logo {
-  scale: 0.75;
-}
-
-.button {
-  background-color: #6A6AE4;
-  /* Purple background */
+/* Navbar link styles */
+.navbar-link {
   color: white;
-  /* White text */
+  font-weight: bold;
   font-family: 'Satoshi', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
 
+.navbar-link:hover {
+  color: #88CCF1; /* Gold hover effect */
+}
 
+/* Button styling */
+.navbar-button, .button {
+  background-color: #88CCF1; /* Purple background */
+  color: white;
+  font-family: 'Satoshi', sans-serif;
   font-weight: 600;
   font-size: 16px;
   padding: 10px 20px;
   border: none;
-  /* No border */
   border-radius: 50px;
-  /* Rounded corners */
   cursor: pointer;
   transition: all 0.3s ease;
-  /* Smooth transition */
   outline: none;
   position: relative;
   overflow: hidden;
 }
 
-
-.button::before {
+/* Ripple effect for buttons */
+.navbar-button::before, .button::before {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
   width: 300%;
   height: 300%;
-  background: rgba(255, 255, 255, 0.1);
-  /* Light ripple effect */
+  background: rgba(255, 255, 255, 0.1); /* Light ripple effect */
   border-radius: 50%;
   transform: translate(-50%, -50%) scale(0);
   transition: transform 0.5s ease;
 }
 
-
-.button:hover::before {
-  transform: translate(-50%, -50%) scale(1);
+.navbar-button:hover, .button:hover {
+  background-color: #88CCF1;
+  color: black;
 }
 
+/* Ensure vertical alignment of elements */
+.navbar-container nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%; /* Control the inner width */
+}
 
-.button:hover {
-  background-color: white;
-  /* White background on hover */
-  color: black;
-  /* Black text on hover */
+/* Logo scaling */
+#Logo {
+  scale: 0.75;
 }
