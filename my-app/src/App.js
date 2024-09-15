@@ -3,9 +3,10 @@ import './App.css';
 import Navbar from './components/Navbar';
 import ShufflingDisplay from './components/ShufflingDisplay';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom'; // Import useNavigate
-import { JobOptions } from './Pages/JobOptions';
+import JobOptions from './Pages/JobOptions'; // Import without curly braces
+
 import ResumeUpload from './Pages/ResumeUpload';
-import { JobListings } from './Pages/JobListings';
+// import { JobListings } from './Pages/JobListings';
 import About from './Pages/AboutUs';
 import ScrollingJobCards from './components/ScrollingJobCards'; // Import the new component
 
@@ -63,7 +64,7 @@ function App() {
           {/* Other routes */}
           <Route path="/job-options" element={<JobOptions />} />
           <Route path="/resume-upload" element={<ResumeUpload />} />
-          <Route path="/job-listings" element={<JobListings />} />
+          {/* <Route path="/job-listings" element={<JobListings />} /> */}
           <Route path="/about" element={<About />} />
         </Routes>
       </div>

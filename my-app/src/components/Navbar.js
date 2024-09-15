@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from './logo.png'; // Ensure this path is correct
+import logo from './matcheslogo.png'; // Ensure this path is correct
 
 const Navbar = () => {
   return (
     <div className="navbar-container">
       <nav className="flex justify-between items-center w-full p-4">
         {/* Left side: Logo */}
-        <div className="flex items-center">
+        <div id = "Logo-Container" className="flex items-center">
           <a href="http://localhost:3000/">
-            <img id="Logo" src={logo} alt="CareersIO Logo" className="h-12" />
+          <img id="Logo" src={logo} alt="CareersIO Logo" className="h-8" />
           </a>
         </div>
 
