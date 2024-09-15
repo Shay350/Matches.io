@@ -16,7 +16,7 @@ const ShufflingDisplay = ({ items }) => {
   }, [items]);
 
   return (
-    <div className="ShufflingDisplay-container">
+    <div>
       <div className="ShufflingDisplay-item">{currentItem}</div>
     </div>
   );

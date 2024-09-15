@@ -10,7 +10,7 @@ import About from './Pages/AboutUs'; // Import the About component
 
 
 
-import ShufflingCards from './components/ShufflingCards'; // Import the new component
+import ScrollingJobCards from './components/ScrollingJobCards'; // Import the new component
 
 
 
@@ -36,7 +36,7 @@ function App() {
                     <ShufflingDisplay items={items} />
                   </p>
                   
-                  <ShufflingCards /> {/* Add the 3D shuffling cards here */}
+                  <ScrollingJobCards /> {/* Add the 3D shuffling cards here */}
                 </header>
               </div>
             }
