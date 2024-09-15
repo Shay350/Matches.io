@@ -3,9 +3,10 @@ import './App.css';
 import Navbar from './components/Navbar';
 import ShufflingDisplay from './components/ShufflingDisplay';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import JobOptions from './Pages/JobOptions';
+import { JobOptions } from './Pages/JobOptions';
 import ResumeUpload from './Pages/ResumeUpload';
-import JobListings from './Pages/JobListings';
+import { JobListings } from './Pages/JobListings';
+import About from './Pages/AboutUs'; // Import the About component
 
 function App() {
   const items = ['Research', 'Law', 'Chemistry', 'Journalism', 'Accounting'];
@@ -37,6 +38,7 @@ function App() {
           <Route path="/job-options" element={<JobOptions />} />
           <Route path="/resume-upload" element={<ResumeUpload />} />
           <Route path="/job-listings" element={<JobListings />} />
+          <Route path="/about" element={<About />} /> {/* Fix: Added About route */}
         </Routes>
       </div>
     </Router>

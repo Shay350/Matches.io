@@ -15,9 +15,10 @@ const Navbar = () => {
 
         {/* Center: Links */}
         <div className="flex space-x-8 items-center">
-          <Link to="/job-listings" className="navbar-link">
+          <Link to="/About" className="navbar-link">
             About Us
           </Link>
+
           <Link to="/job-options" className="navbar-link">
             How It Works
           </Link>
