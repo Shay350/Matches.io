@@ -1,38 +1,82 @@
+/* General App layout */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4ff, #dce6f5); /* Softer gradient for better readability */
+  color: #333;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
+/* Adjust header styling */
+.App-header {
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Improve title readability */
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+/* Text paragraph styling */
+p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin: 1rem auto;
+  max-width: 800px;
+}
+
+/* Styling for the shuffling display component */
+.ShufflingDisplay-container {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ShufflingDisplay-item {
+  padding: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: #3182ce;
+  color: #fff;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
+}
+
+/* Hover effect for shuffling items */
+.ShufflingDisplay-item:hover {
+  background-color: #2b6cb0;
+  transform: translateY(-5px); /* Lifting effect on hover */
+}
+
+/* Navbar styling */
+.Navbar {
+  background-color: #1a202c;
+  color: #1a202c;
+  padding: 1rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.Navbar a {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  text-decoration: none;
+  font-weight: 600;
 }
