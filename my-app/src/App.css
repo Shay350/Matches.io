@@ -102,6 +102,12 @@ p {
   color: #88CCF1; /* Gold hover effect */
 }
 
+#Logo {
+  height: 80px;
+  width: auto;
+}
+
+
 /* Button styling */
 .navbar-button, .button {
   background-color: #88CCF1; /* Purple background */
