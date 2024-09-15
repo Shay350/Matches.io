@@ -33,11 +33,13 @@ function App() {
                   </h1>
                   <p className="text-lg text-gray-700">
                     Everyone deserves to have a clear perspective of the job market, especially people in roles like: 
-                    <ShufflingDisplay items={items} />
+                    
                   </p>
                   
-                  <ScrollingJobCards /> {/* Add the 3D shuffling cards here */}
+                  
                 </header>
+                <ShufflingDisplay items={items} />
+                <ScrollingJobCards /> {/* Add the 3D shuffling cards here */}
               </div>
             }
           />
