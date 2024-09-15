@@ -7,6 +7,12 @@ import JobOptions from './Pages/JobOptions';
 import ResumeUpload from './Pages/ResumeUpload';
 import JobListings from './Pages/JobListings';
 
+
+
+import ShufflingCards from './components/ShufflingCards'; // Import the new component
+
+
+
 function App() {
   const items = ['Research', 'Law', 'Chemistry', 'Journalism', 'Accounting'];
 
@@ -28,6 +34,8 @@ function App() {
                     Everyone deserves to have a clear perspective of the job market, especially people in roles like: 
                     <ShufflingDisplay items={items} />
                   </p>
+                  
+                  <ShufflingCards /> {/* Add the 3D shuffling cards here */}
                 </header>
               </div>
             }
