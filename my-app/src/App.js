@@ -23,30 +23,36 @@ function App() {
     return (
       <div className="App-content flex flex-col items-center justify-center min-h-screen py-10 bg-gradient-to-r from-blue-200 to-blue-100">
         <header className="App-header text-center mb-12">
-          <h1 className="text-5xl font-extrabold text-gray-900 mb-6 drop-shadow-lg">
+          <h1 className="background: linear-gradient(45deg, #BEEBE1, #223A60);">
             Welcome to Internships.io
+
+            <p className="text-lg text-gray-700 mb-6">
+              Everyone deserves to have a clear perspective of the job market and how much they should be paid, especially people in roles like:
+            </p>
           </h1>
-          <p className="text-lg text-gray-700 mb-6">
-            Everyone deserves to have a clear perspective of the job market, especially people in roles like:
-          </p>
-        </header>
 
-        {/* Center the roles */}
-        <ShufflingDisplay items={items} />
+          <ShufflingDisplay items={items} />
 
-        {/* Add the 3D scrolling job cards */}
-        <div className="my-10 w-full">
-          <ScrollingJobCards />
-        </div>
-
-        {/* Get Started button */}
-        <div className="mt-8">
+          <div className="my-10 w-full">
+            <ScrollingJobCards />
+          </div>
+          <br>
+          </br>
+          <br>
+          </br>
           <button
             onClick={handleGetStartedClick} // Handle click to navigate to JobOptions
-            className="px-6 py-3 bg-blue-600 text-white font-bold text-lg rounded-md shadow-md hover:bg-blue-700 transition duration-300"
+            className="navbar-button"
           >
             Get Started
           </button>
+
+        </header>
+
+        {/* Get Started button */}
+        <div className="mt-8">
+
+          
         </div>
       </div>
     );

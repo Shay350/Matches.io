@@ -1,33 +1,50 @@
-/* components/ScrollingJobCards.css */
+/* ScrollingJobCards.css */
 .scrolling-job-cards {
     width: 600px;
     height: 320px;
-    /* Enough height to show 4 cards */
+    /* Height to show 4 cards */
     overflow: hidden;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0 auto;
+    margin-top: 2rem;
+    border-radius: 20px;
+    /* Add top margin for spacing after ShufflingDisplay */
+    /* Center the component */
 }
 
 .job-card-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    position: relative;
+    animation: scroll 24s linear infinite;
+    border-radius: 20px;
+    /* Adjust time as needed */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50%);
+        /* Move up by half of the container's height */
+    }
 }
 
 .job-card {
     width: 100%;
-    height: 70px;
+    height: 80px;
+    /* Slightly increased for better spacing */
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    border-radius: 8px;
+    
+    border-radius: 20px;
     opacity: 0.9;
+    margin-bottom: 10px;
+    /* Add some space between cards */
 }
 
 .job-title {
@@ -40,4 +57,9 @@
     font-size: 1rem;
     font-weight: 500;
     color: #777;
+}
+
+/* Optional: Pause animation on hover */
+.scrolling-job-cards:hover .job-card-container {
+    animation-play-state: paused;
 }
